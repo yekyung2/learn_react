@@ -1,50 +1,22 @@
 import React, { Component } from 'react';
-
+import TOC from './components/TOC';
+import Content from './components/Content'
+import Subject from './components/Subject'
 import './App.css';
 
-class Subject extends Component{
-  render(){
-    return (
-      <header>
-      <h1>Hey, I'm scuba!</h1>
-      </header>
-    );
-  }
-}
 
-class TOC extends Component{
-  render(){
-    return (
-      <nav>
-      <ul>
-          <li><a hre="1.html"></a>Welcome</li>
-          <li><a hre="2.html"></a>Learning Journey</li>
-          <li><a hre="3.html"></a>Team Project</li>
-      </ul>
-  </nav>
-    );
-  }
-}
 
-class Content extends Component{
-  render(){
-    return(
-      <article>
-      <h2>Welcome</h2> 
-      Hi, I'm Scuba Lee. I love to record all of my history and share with somebody else. 
-    </article>
-    )
-  }
-}
 
 // function App() {
 class App extends Component {
   render() {
   return (
     <div className="App">
-     <Subject></Subject>
+     <Subject title="Hey, I'm scuba!" sub="I'm the head of Deep Wide Studio."></Subject>
+     <Subject title="Record" sub="Recording is one of the main keywords that I have."></Subject>
+    
      <TOC></TOC>
-     <Content></Content>
+     <Content title="Welcome" desc="Hi, I'm Scuba Lee. I love to record all of my history and share with somebody else."></Content>
     </div>
   );
 }
